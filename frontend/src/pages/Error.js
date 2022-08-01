@@ -4,7 +4,7 @@ import Sidebar from '../components/sidebar/Sidebar.js'
 import Footer from '../components/footer/Footer.js'
 import { Outlet } from 'react-router-dom'
 
-const Login = () => {
+const Error = () => {
   return (
     <div className="w-screen h-screen">
       
@@ -24,4 +24,4 @@ const Login = () => {
   )
 }
 
-export default Login;
+export default Error;

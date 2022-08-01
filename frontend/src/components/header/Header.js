@@ -1,4 +1,4 @@
-import { SearchIcon,  UserCircleIcon, MenuIcon } from '@heroicons/react/solid'
+import { SearchIcon,  UserCircleIcon } from '@heroicons/react/solid'
 import { BellIcon} from '@heroicons/react/outline'
 
 const Header = ({title}) => {
