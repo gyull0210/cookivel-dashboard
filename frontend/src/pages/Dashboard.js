@@ -14,11 +14,11 @@ import Footer from '../components/footer/Footer.js'
 import { Outlet } from 'react-router-dom'
 
 const Dashboard = () => {
-	return (
-		<div className="flex w-screen h-screen bg-gray-100">
-			{/* sidebar */}
-			<div className="w-17 px-1 md:w-22 lg:w-64 lg:px-4 flex flex-col h-screen py-8 bg-white border-r dark:bg-gray-800 dark:border-gray-600  duration-500">
-				<div className="flex justify-center items-center py-6">
+  return (
+    <div className="flex w-screen h-screen bg-gray-100">
+      {/* sidebar */}
+      <div className="w-17 px-1 md:w-22 lg:w-64 lg:px-4 flex flex-col h-screen py-8 bg-white border-r dark:bg-gray-800 dark:border-gray-600  duration-500">
+        <div className="flex justify-center items-center py-6">
           <div className="hidden lg:flex">
             <span className="text-2xl font-semibold text-white">C</span>
             <span className="text-2xl font-semibold text-[#EEE0B1]">OO</span>
@@ -56,12 +56,14 @@ const Dashboard = () => {
             </ul>
           </nav>
 
-          <div className="flex items-center lg:px-4 my-3 lg:mx-2 rounded-full hover:bg-gray-600">
-						<div className="mx-auto lg:p-3">
-							<img className="block object-cover rounded-full h-10 w-10" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="avatar"/>
-						</div>             
-            <h4 className="hidden lg:block mx-2 font-medium text-gray-800 dark:text-gray-200 hover:underline">John Doe</h4>
-						<button className="hidden lg:block" type="button">
+          <div className="flex justify-between items-center my-3 lg:hover:bg-gray-600 rounded-full">
+            <div className="mx-auto p-3 hover:bg-gray-700 rounded-full">
+              <img className="block object-cover rounded-full h-10 w-10" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="avatar"/>
+            </div>
+            <div className="">
+              <h4 className="hidden lg:block font-medium text-gray-800 dark:text-gray-200">John Doe</h4>
+            </div>		
+            <button className="hidden lg:block" type="button">
               <span className="">
                 <DotsHorizontalIcon className="w-6 h-6 fill-gray-400"/>
               </span>
@@ -69,20 +71,20 @@ const Dashboard = () => {
           </div>
         </div>
     </div>
-			{/* content */}
-			<div className="flex-1 w-full bg-gray-600 duration-500">
-				{/* header */}
-				<header className="w-full h-10 bg-gray-800 text-white">
+    {/* content */}
+    <div className="flex-1 w-full bg-gray-600 duration-500">
+        {/* header */}
+      <header className="w-full h-10 bg-gray-800 text-white">
 
-				</header>
-				<main className="w-full ">
-					ㅇ
-				</main>
-				<footer className="w-full h-10 bg-gray-300">
+      </header>
+      <main className="w-full ">
+          ㅇ
+      </main>
+      <footer className="w-full h-10 bg-gray-300">
 
-				</footer>
-			</div>
-		</div>
+      </footer>
+    </div>
+  </div>
   )
 }
 
