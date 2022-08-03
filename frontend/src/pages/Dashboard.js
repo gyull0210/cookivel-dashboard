@@ -7,7 +7,7 @@ import { HomeIcon as HomeSolidIcon,
   DotsHorizontalIcon  } from '@heroicons/react/solid'
 import { HomeIcon, UsersIcon, MicrophoneIcon, ArchiveIcon, BookOpenIcon, AnnotationIcon } from '@heroicons/react/outline'
 import { FaCookieBite } from 'react-icons/fa'
-import NavLink from './components/sidebar/NavLink.js'
+import NavLink from '../components/sidebar/NavLink.js'
 import Header from '../components/header/Header.js'
 import Sidebar from '../components/sidebar/Sidebar.js'
 import Footer from '../components/footer/Footer.js'
