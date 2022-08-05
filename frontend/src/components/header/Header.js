@@ -36,7 +36,7 @@ const Header = ({title}) => {
           </div>
         </div>
       </nav>
-      <nav className="dark:bg-gray-800 text-lg">
+      {/* <nav className="dark:bg-gray-800 text-lg">
         <ul className="flex justify-between">
           <li className="w-full h-10 text-white hover:border-b-2 hover:border-gray-400 duration-300">
             <Link to="/users/:userlist">
@@ -54,7 +54,7 @@ const Header = ({title}) => {
             </Link>
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </header>
   )
 }

@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css';
 
+import Admin from './pages/Admin.js'
 import Dashboard from './pages/Dashboard.js'
 import Users from './pages/Users.js'
 import Managers from './pages/Managers.js'
@@ -17,7 +18,8 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Routes>
-          <Route path="/cookieboard/*" element={<Dashboard/>}>
+          <Route path="/*" element={<Admin/>}>
+            <Route path="dashboard" element={<Dashboard/>}/>
             <Route path="users" element={<Users/>}/>
             <Route path="managers" element={<Managers/>}/>
             <Route path="books" element={<Books/>}/>
