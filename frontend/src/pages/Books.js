@@ -1,15 +1,22 @@
 
-import Header from '../components/header/Header.js'
-import Sidebar from '../components/sidebar/Sidebar.js'
-import Footer from '../components/footer/Footer.js'
-
 const Books = () => {
   return (
-    <div className="flex flex-wrap">
-      <div className="w-full lg:w-8/12 h-[500px] bg-white dark:bg-gray-700 shadow rounded-2xl p-4 ">
-        ㅇㅇㅇㅇ
+    <main className="relative h-full p-5 bg-gray-200">  
+      <div className="w-full flex items-center mb-4">
+        <h1 className="text-3xl font-bold text-black">작품관리</h1>
       </div>
-    </div>
+      
+      <div className="grid grid-cols-12 flex-wrap gap-6">
+        
+        <div className="w-full h-96 col-span-12 xl:col-span-9 2xl:col-span-9 z-10 shadow rounded-lg bg-white">
+        </div>
+    
+        <div className="relative px-5 pt-8 pb-14 col-span-12 z-10 shadow rounded-lg bg-white">
+    
+        </div>
+        
+      </div>
+    </main>
   )
 }
 

@@ -9,11 +9,10 @@ import { HomeIcon, UsersIcon, MicrophoneIcon, ArchiveIcon, BookOpenIcon, Annotat
 import { FaCookieBite } from 'react-icons/fa'
 import NavLink from './NavLink.js'
 
-const Sidebar = ({collasped}) => {
+const SideNavbar = ({collasped, toggleSidebar}) => {
 
   return (
-		<aside className={ 
-      `${collasped  ? 'w-17 px-1 md:w-22 lg:w-60 lg:px-4':'w-17 px-1 md:w-22 lg:w-22'} flex flex-col h-screen py-2 bg-light-200 border-r border-gray-400 duration-500`}>
+		<aside className={`${collasped  ? 'w-60 px-4':'hidden md:w-20 md:px-1 lg:w-20 lg:px-1'} fixed z-20 flex flex-col h-screen py-2 bg-white border-r border-gray-400`}>
       <div className="flex flex-col justify-between flex-1">
         <div className="flex flex-col flex-start items-center">         
           <div className={collasped ? "flex items-center lg:ml-6": "flex items-center"}>
@@ -22,7 +21,7 @@ const Sidebar = ({collasped}) => {
               <span className="text-2xl font-semibold text-amber-300">OO</span>
               <span className="text-2xl font-semibold text-black">KIVEL</span>
             </div>
-            <span className="text-2xl font-semibold text-amber-300 p-3">
+            <span className="text-2xl font-semibold text-amber-300 p-3" onClick={toggleSidebar}>
               <FaCookieBite className="hover:animate-waving"/>
             </span>
           </div>
@@ -60,4 +59,4 @@ const Sidebar = ({collasped}) => {
   )
 }
 
-export default Sidebar
+export default SideNavbar

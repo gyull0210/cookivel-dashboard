@@ -1,26 +1,33 @@
 
-import Header from '../components/header/Header.js'
-import Sidebar from '../components/sidebar/Sidebar.js'
-import Footer from '../components/footer/Footer.js'
-
 const Managers = () => {
   return (
-    <>
-          <main className="w-full h-screen overflow-auto dark:bg-gray-800">
-            <div className="flex flex-wrap">
-            <div className="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-700 dark:border-gray-600">
-    <a href="#">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-    </a>
-    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-    <a href="#" className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-        Read more
-        <svg aria-hidden="true" className="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-    </a>
-</div>
+    <main className="relative h-full p-5 bg-gray-200">  
+      <div className="w-full flex items-center mb-4">
+        <h1 className="text-3xl font-bold text-black">관리자관리</h1>
+      </div>
+      
+      <div className="grid grid-cols-12 flex-wrap gap-6">
+        
+        <div className="w-full h-96 col-span-12 xl:col-span-9 2xl:col-span-9 z-10 shadow rounded-lg bg-white">
+        </div>
+    
+        <div className="relative px-5 pt-8 pb-14 col-span-12 z-10 shadow rounded-lg bg-white">
+    
+        </div>
+    
+        <div className="relative w-full h-full grid grid-cols-12 gap-6 xl:absolute -mt-8 xl:mt-0 pb-6 xl:pb-0 top-0 right-0 z-30 xl:z-auto">
+          <div className="col-span-12 xl:col-span-3 xl:col-start-10 xl:pb-16 z-30 ">
+            <div className="flex flex-col ">
+              <div className="flex-1 xl:min-h-0">
+                <div className="max-h-full xl:overflow-y-auto bg-white shadow rounded-lg">
+    
+                </div>
+              </div>
             </div>
-          </main>
-          </>
+          </div>
+        </div>
+      </div>
+    </main>
   )
 }
 

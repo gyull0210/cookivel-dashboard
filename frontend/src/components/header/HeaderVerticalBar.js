@@ -2,13 +2,15 @@ import { Link } from 'react-router-dom'
 import { SearchIcon,  UserCircleIcon } from '@heroicons/react/solid'
 import { MenuIcon, BellIcon} from '@heroicons/react/outline'
 
-const Header = (props) => {
+const HeaderVerticalBar = ({collasped, toggleSidebar}) => {
 
   return (
-  <header className="flex justify-between items-center px-2 bg-light-100 border-b border-gray-400">
+  <header className={`${collasped ? 'ml-0 lg:ml-60 lg:left-60': 'ml-0  md:ml-20 md:left-20 lg:ml-20 lg:left-20'} bg-light-100 border-b border-gray-400`}>
+    <nav className="flex justify-between items-center px-2">
     <div className="flex">
-   
-      <button className="p-3 rounded-full hover:bg-gray-200 active:bg-gray-400 duration-200" type="button" onClick={props.toggleSidebar}>
+      {/* logo */}
+      
+      <button className="p-3 rounded-full hover:bg-gray-200 active:bg-gray-400 duration-200" type="button" onClick={toggleSidebar}>
         <MenuIcon className="w-6 h-6 stroke-gray-800"/>
       </button>
 
@@ -53,8 +55,9 @@ const Header = (props) => {
       </div>
 
     </div>
+    </nav>
   </header>
  )
 }
 
-export default Header
+export default HeaderVerticalBar
