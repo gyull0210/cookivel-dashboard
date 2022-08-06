@@ -16,24 +16,17 @@ import Sidebar from '../components/sidebar/SideNavbar.js'
 const Test = () => {
 
   const [collasped, setIsCollapsed ] = useState(false);
-  const [mobileCollasped, setIsMobileCollasped] = useState(false);
-
+ 
   const toggleSidebar = (e) => {
     setIsCollapsed(!collasped);
   }
 
-  const toggleMobileSidebar = (e) => {
-    setIsMobileCollasped(!mobileCollasped);
-  }
-
-  console.log(mobileCollasped);
-
 	return (
 		<div className="">
-      <Sidebar collasped={collasped} mobileCollasped={mobileCollasped} toggleSidebar={toggleSidebar} toggleMobileSidebar={toggleMobileSidebar}/> 
-      <Header collasped={collasped} mobileCollasped={mobileCollasped} toggleSidebar={toggleSidebar} toggleMobileSidebar={toggleMobileSidebar}/>
+      <Sidebar collasped={collasped} toggleSidebar={toggleSidebar}/> 
+      <Header collasped={collasped} toggleSidebar={toggleSidebar}/>
       {/* main */}    
-      <div className={`${collasped ? 'ml-0 lg:ml-60':'ml-0 lg:ml-20'} overflow-hidden duration-200`}>
+      <div className={`${collasped ? 'ml-0 lg:ml-20':'ml-0 lg:ml-60'} overflow-hidden duration-200`}>
       {/* sidebar */}			              
       <Outlet/>
       </div>

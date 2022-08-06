@@ -2,19 +2,15 @@ import { Link } from 'react-router-dom'
 import { SearchIcon,  UserCircleIcon } from '@heroicons/react/solid'
 import { MenuIcon, BellIcon} from '@heroicons/react/outline'
 
-const HeaderVerticalBar = ({collasped, mobileCollasped, toggleSidebar, toggleMobileSidebar}) => {
+const HeaderVerticalBar = ({collasped, toggleSidebar}) => {
 
   return (
-  <header className={`${collasped ? 'ml-0 lg:ml-60': 'ml-0 lg:ml-20'} bg-light-100 border-b border-gray-400 duration-200`}>
+  <header className={`${collasped ? 'ml-0 lg:ml-20':'ml-0 lg:ml-60'} bg-light-100 border-b border-gray-400 duration-200`}>
     <nav className="flex justify-between items-center px-2">
     <div className="flex">
       {/* logo */}
       
-      <button className="hidden lg:inline-block p-3 rounded-full hover:bg-gray-200 active:bg-gray-400 duration-200" type="button" onClick={toggleSidebar}>
-        <MenuIcon className="w-6 h-6 stroke-gray-800"/>
-      </button>
-
-      <button className="inline-block lg:hidden p-3 rounded-full hover:bg-gray-200 active:bg-gray-400 duration-200" type="button" onClick={toggleMobileSidebar}>
+      <button className="p-3 rounded-full hover:bg-gray-200 active:bg-gray-400 duration-200" type="button" onClick={toggleSidebar}>
         <MenuIcon className="w-6 h-6 stroke-gray-800"/>
       </button>
 
@@ -40,7 +36,7 @@ const HeaderVerticalBar = ({collasped, mobileCollasped, toggleSidebar, toggleMob
         <button className="flex items-center" type="button">
         {/* avatar */}
           <div className="w-10 h-10 rounded-full overflow-hidden active:bg-gray-400 duration-200">
-            <img className="w-full h-full" src="https://i.pravatar.cc/48"/>
+            <img className="w-full h-full" src="https://i.pravatar.cc/80" alt="프로필이미지"/>
           </div>
         {/* nickName */}
           <div className="hidden lg:block">

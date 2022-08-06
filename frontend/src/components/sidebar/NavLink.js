@@ -1,7 +1,7 @@
   import React from 'react'
   import { Link, useMatch } from 'react-router-dom'
 
-  const NavLink = ({ to, name, Icon, SolidIcon, collasped, mobileCollasped }) => {
+  const NavLink = ({ to, name, Icon, SolidIcon, collasped }) => {
 
     const active = useMatch(to);
 
@@ -11,12 +11,12 @@
         <div className="rounded-full">
           {active ? <SolidIcon className="w-6 h-6 fill-gray-800"/> : <Icon className="w-6 h-6 stroke-gray-800" />}
         </div>       
-        {collasped ? <span className={`${active ? 'text-gray-800 font-semibold' : 'text-gray-800'} text-xl w-full inline-block`}> 
+        {collasped ? '' : <span className={`${active ? 'text-gray-800 font-semibold' : 'text-gray-800'} text-xl w-full inline-block`}> 
           {name}
-        </span> : '' }
-        {mobileCollasped ? '' : <span className={`${active ? 'text-gray-800 font-semibold' : 'text-gray-800'} lg:hidden text-xl w-full inline-block`}> 
+        </span> }
+        {collasped ? <span className={`${active ? 'text-gray-800 font-semibold' : 'text-gray-800'} lg:hidden text-xl w-full inline-block`}> 
           {name}
-        </span>}
+        </span> : ''}
       </div>
       </Link>
     )
