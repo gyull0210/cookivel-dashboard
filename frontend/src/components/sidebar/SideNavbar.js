@@ -13,7 +13,7 @@ const SideNavbar = ({collasped, mobileCollasped, toggleSidebar, toggleMobileSide
 
   return (
 		<aside className="fixed z-20 flex flex-col h-screen py-2 bg-white border-r border-gray-400">
-      <div className={`hidden lg:block ${collasped  ? 'w-60 lg:w-60 px-4':'w-20 :px-1'} flex flex-col justify-between flex-1`}>
+      <div className={`hidden lg:block ${collasped  ? 'w-60 lg:w-60 px-4':'w-20 :px-1'} flex flex-col justify-between flex-1 duration-500`}>
         <div className="flex flex-col flex-start items-center">         
           <div className={collasped ? "flex items-center lg:ml-6": "flex items-center"}>
             <div className={collasped ? "flex" : "hidden"}>
@@ -54,7 +54,7 @@ const SideNavbar = ({collasped, mobileCollasped, toggleSidebar, toggleMobileSide
       </div>
     </div>
 
-    <div className={`block lg:hidden ${mobileCollasped  ? '-left-60':'left-0'} w-60 px-4 flex flex-col justify-between flex-1`}>
+    <div className={`block lg:hidden ${mobileCollasped  ? '-ml-60':'ml-0'} w-60 px-4 flex flex-col justify-between flex-1 duration-500`}>
         <div className="flex flex-col flex-start items-center">         
           <div className="flex items-center lg:ml-6">
             <div className="flex">
