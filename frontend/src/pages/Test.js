@@ -33,7 +33,7 @@ const Test = () => {
       <Sidebar collasped={collasped} mobileCollasped={mobileCollasped} toggleSidebar={toggleSidebar} toggleMobileSidebar={toggleMobileSidebar}/> 
       <Header collasped={collasped} mobileCollasped={mobileCollasped} toggleSidebar={toggleSidebar} toggleMobileSidebar={toggleMobileSidebar}/>
       {/* main */}    
-      <div className={collasped ? "ml-0 lg:ml-60 overflow-hidden":"ml-0 lg:ml-20 overflow-hidden" }>
+      <div className={`${collasped ? 'ml-0 lg:ml-60':'ml-0 lg:ml-20'} overflow-hidden duration-200`}>
       {/* sidebar */}			              
       <Outlet/>
       </div>

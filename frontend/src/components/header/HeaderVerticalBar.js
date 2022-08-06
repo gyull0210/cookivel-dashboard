@@ -5,7 +5,7 @@ import { MenuIcon, BellIcon} from '@heroicons/react/outline'
 const HeaderVerticalBar = ({collasped, mobileCollasped, toggleSidebar, toggleMobileSidebar}) => {
 
   return (
-  <header className={`${collasped ? 'ml-0 lg:ml-60': 'ml-0 lg:ml-20'} bg-light-100 border-b border-gray-400`}>
+  <header className={`${collasped ? 'ml-0 lg:ml-60': 'ml-0 lg:ml-20'} bg-light-100 border-b border-gray-400 duration-200`}>
     <nav className="flex justify-between items-center px-2">
     <div className="flex">
       {/* logo */}
