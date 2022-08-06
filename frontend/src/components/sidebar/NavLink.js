@@ -1,7 +1,7 @@
   import React from 'react'
   import { Link, useMatch } from 'react-router-dom'
 
-  const NavLink = ({ to, name, Icon, SolidIcon, collasped }) => {
+  const NavLink = ({ to, name, Icon, SolidIcon, collasped, mobileCollasped }) => {
 
     const active = useMatch(to);
 
