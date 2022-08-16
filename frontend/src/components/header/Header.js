@@ -6,10 +6,16 @@ import { useDetectOutsideClick } from '../../hooks/useDetectOutsideClick.js'
 
 const Header = ({collasped, toggleSidebar}) => {
 
-  const dropdownRef = useRef(null);
-  const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
-  const handleProfile = () => {
-    setIsActive(!isActive);
+  const dropdownProfileRef = useRef(null);
+  const dropdownNotificationRef=useRef(null);
+  const [isProfileActive, setIsProfileActive] = useDetectOutsideClick(dropdownProfileRef, false);
+  const [isNotificationActive, setIsNotificationActive] = useDetectOutsideClick(dropdownNotificationRef, false);
+
+  const handleDropdownNotification = () => {
+    setIsNotificationActive(!isNotificationActive);
+  }
+  const handleDropdownProfile = () => {
+    setIsProfileActive(!isProfileActive);
   }
 
   return (
@@ -35,13 +41,40 @@ const Header = ({collasped, toggleSidebar}) => {
     <div className="flex items-center pr-2">
    
       {/* notification */}
-      <button className="p-3 rounded-full hover:bg-gray-200 active:bg-gray-400 duration-200 dark:hover:bg-gray-400 dark:active:bg-gray-500">
-        <BellIcon className="w-6 h-6 stroke-gray-600 dark:stroke-white hover:animate-waving"/>
-      </button>
+      <div className="relative inline-block py-3" ref={dropdownNotificationRef}>
+        <button className="p-3 rounded-full hover:bg-gray-200 active:bg-gray-400 duration-200 dark:hover:bg-gray-400 dark:active:bg-gray-500" onClick={handleDropdownNotification}>
+          <BellIcon className="w-6 h-6 stroke-gray-600 dark:stroke-white hover:animate-waving"/>
+        </button>
 
+        {/* dropdown menu */}
+        <div id="dropdownDivider" className={`${isNotificationActive ? 'absolute':'hidden'} right-0 mt-2 z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600`}>
+          <ul className="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDividerButton">
+            <li>
+              <a href="#" className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                이벤트 진행중입니다
+              </a>
+            </li>
+            <li>
+              <a href="#" className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                이벤트 진행중입니다
+              </a>
+            </li>
+            <li>
+              <a href="#" className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                이벤트 진행중입니다
+              </a>
+            </li>
+          </ul>
+          <div className="py-1">
+            <a href="#" className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+              새로운 알림이 있습니다
+            </a>
+          </div>
+        </div>
+      </div>
       {/* usermenu */}
-      <div className="relative inline-block py-3">
-        <button className="flex items-center" type="button" onClick={handleProfile}>
+      <div className="relative inline-block py-3" ref={dropdownProfileRef}>
+        <button className="flex items-center" type="button" onClick={handleDropdownProfile}>
         {/* avatar */}
           <div className="w-10 h-10 rounded-full overflow-hidden mr-2 active:bg-gray-400 duration-200">
             <img className="w-full h-full" src="https://i.pravatar.cc/80" alt="프로필이미지"/>
@@ -57,7 +90,7 @@ const Header = ({collasped, toggleSidebar}) => {
         </button>
 
         {/* dropdown menu */}
-        <div id="dropdownDivider" ref={dropdownRef} className={`${isActive ? 'absolute':'hidden'} right-0 mt-2 z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600`}>
+        <div id="dropdownDivider" className={`${isProfileActive ? 'absolute':'hidden'} right-0 mt-2 z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600`}>
           <ul className="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDividerButton">
             <li>
               <a href="#" className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">알림</a>
