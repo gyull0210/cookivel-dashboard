@@ -7,7 +7,6 @@ import Footer from '../components/footer/Footer.js'
 const Admin = () => {
 
   const [collasped, setIsCollapsed ] = useState(false);
-
   const toggleSidebar = (e) => {
     setIsCollapsed(!collasped);
   }
