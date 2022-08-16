@@ -1,7 +1,7 @@
 
 const Books = () => {
   return (
-    <main className="relative h-full p-5 bg-gray-200">  
+    <main className="relative h-full p-5 bg-white rounded-lg shadow">  
       <div className="w-full flex items-center mb-4">
         <h1 className="text-3xl font-bold text-black">작품관리</h1>
       </div>

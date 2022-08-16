@@ -1,17 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
-import { HomeIcon as HomeSolidIcon, 
-  UsersIcon as UsersSolidIcon, 
-  MicrophoneIcon as MicrophoneSolidIcon, 
-  ArchiveIcon as ArchiveSolidIcon, 
-  BookOpenIcon as BookOpenSolidIcon, 
-  AnnotationIcon as AnnotationSolidIcon,
-  DotsHorizontalIcon,
-  SearchIcon  } from '@heroicons/react/solid'
-import { BellIcon, HomeIcon, UsersIcon, MicrophoneIcon, ArchiveIcon, BookOpenIcon, AnnotationIcon, MenuIcon } from '@heroicons/react/outline'
-import { FaCookieBite } from 'react-icons/fa'
 import Header from '../components/header/Header.js'
 import Sidebar from '../components/sidebar/Sidebar.js'
+import Footer from '../components/footer/Footer.js'
 
 const Admin = () => {
 
@@ -22,33 +13,15 @@ const Admin = () => {
   }
 
 	return (
-		<div className="flex w-screen h-full">
-			{/* sidebar */}
-			<Sidebar collasped={collasped} />
-			{/* content */}
-			<div className="flex flex-col w-full">
-        <Header toggleSidebar={toggleSidebar}/>
-        {/* main+footer */}
-        <div className="flex flex-col w-full h-full justify-between overflow-y-auto">             
-        <Outlet/>
-          
-        {/* footer */}
-        <footer className="flex flex-wrap justify-around items-center h-15 bg-gray-300 px-2 lg:px-5 py-3">
-          <div className="">
-            <a className="mr-5" href="/privacypolicy">
-              개인정보이용방침
-            </a>
-
-            <a href="/termsofservice">
-              사이트운영정책
-            </a>
-          </div>
-          <div className="">
-          Copyright © 2022 COOKIVEL All rights reserved.
-          </div>
-        </footer>
-        </div>
-			</div>
+		<div className="h-screen bg-gray-200 dark:bg-gray-800">
+      <Sidebar collasped={collasped} toggleSidebar={toggleSidebar}/> 
+      <Header collasped={collasped} toggleSidebar={toggleSidebar}/>
+      {/* main */}    
+      <div className={`${collasped ? 'ml-0 lg:ml-20':'ml-0 lg:ml-60'} pt-20 lg:pt-24 px-4 lg:px-8 h-full overflow-hidden duration-200`}>
+      {/* sidebar */}		              
+        <Outlet/>    
+      </div>
+      <Footer collasped={collasped} />
 		</div>
 	)
 }

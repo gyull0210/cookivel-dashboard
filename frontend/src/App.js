@@ -12,15 +12,19 @@ import HelpCenter from './pages/HelpCenter.js'
 import Login from './pages/Login.js'
 import Error from './pages/Error.js'
 import Test from './pages/Test.js'
+import TestUsers from './pages/TestUsers.js'
+import UsersDetail from './pages/UsersDetail.js'
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Routes>
-          <Route path="/*" element={<Test/>}>
+          <Route path="/*" element={<Admin/>}>
             <Route path="dashboard" element={<Dashboard/>}/>
-            <Route path="users" element={<Users/>}/>
+            <Route path="users" element={<TestUsers/>}>
+              <Route path="usersDetail" element={<UsersDetail/>}/>
+            </Route>
             <Route path="managers" element={<Managers/>}/>
             <Route path="books" element={<Books/>}/>
             <Route path="boards" element={<Boards/>}/>
